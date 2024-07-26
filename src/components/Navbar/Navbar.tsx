@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
-import { MdPerson, MdSearch, MdLogout, MdMenu } from 'react-icons/md';
+import { MdPerson, MdLogout, MdMenu } from 'react-icons/md';
 import { ref, get } from 'firebase/database';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { database } from '../../firebaseConfig';
@@ -190,7 +190,7 @@ const Navbar: React.FC = () => {
               className="dropdown"
             >
               <NavLink to="/product-management">Products</NavLink>
-              {/* {showCategoryList && (
+              {showCategoryList && (
                 <ul className="dropdown-menu">
                   {categories.map((category) => (
                     <li key={category} className='category'>
@@ -198,7 +198,7 @@ const Navbar: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              )} */}
+              )}
             </li>
           )}
           {isAdmin && (
@@ -256,12 +256,13 @@ const Navbar: React.FC = () => {
   );
 };
 
-function debounce(func: (...args: any[]) => void, wait: number) {
+function debounce<T extends (...args: any[]) => void>(func: T, wait: number) {
   let timeout: NodeJS.Timeout;
-  return (...args: any[]) => {
+  return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), wait);
+    timeout = setTimeout(() => func(...args), wait);
   };
 }
+
 
 export default Navbar;

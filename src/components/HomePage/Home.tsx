@@ -4,7 +4,6 @@ import { ref as dbRef, onValue } from 'firebase/database';
 import ProductSlider from '../SwiperSlide/ProductSlider';
 import { useNavigate } from 'react-router-dom';
 import { MdArrowLeft, MdArrowRight } from 'react-icons/md';
-import { FaDove } from 'react-icons/fa';
 import './Home.css';
 
 interface Product {
