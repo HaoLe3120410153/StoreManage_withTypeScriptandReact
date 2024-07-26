@@ -1,0 +1,32 @@
+.app__add-product__form {
+    width: 100%;
+}
+
+.app__form_add {
+    display: flex;
+    font-size: 20px;
+}
+
+.app__form_add label{
+    width: 20%;
+    line-height: 50px;
+}
+
+.app__form_add input,select {
+    width: 50%;
+    margin: 5px;
+    font-size: 20px;
+    padding: 0 10px ;
+}
+
+.div__button {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px){
+    .app__form_add label {
+        width: 40%;
+        line-height: 30px;
+    }
+}

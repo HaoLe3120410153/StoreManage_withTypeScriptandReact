@@ -1,0 +1,23 @@
+:root {
+  --font-base: "Roboto", sans-serif;
+  --font-alt: "Roboto", sans-serif;
+
+  --color-golden: #DCCA87;
+  --color-black: #0C0C0C;
+  --color-gray: #545454;
+  --color-crimson: #F5EFDB;
+  --color-grey: rgb(233 237 240);
+  --color-white: #FFFFFF;
+  --color-light_green : rgb(239 255 242);
+  --color-light_green-hover:rgb(207, 248, 214);
+  --color-light_grey_input: #e8f0fe;
+  --color-green: #018846;
+  --color-green_btn: #29ef8f;
+  --color-green_btn_hover: #0f5332;
+  --color-bg: radial-gradient(159.85% 367.97% at 150% 123.85%, #ffe147 0, #65ae17 38.76%, #469c4b 59.65%, #00713b 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

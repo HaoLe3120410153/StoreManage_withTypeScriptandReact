@@ -1,0 +1,23 @@
+.swiper-container {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.swiper-button-prev{
+    color: var(--color-white);
+    background-color: transparent;
+
+    &:hover{
+        color: var(--color-green);
+    }
+}
+.swiper-button-next{
+    color: var(--color-white);
+    background-color: transparent;
+
+    &:hover{
+        color: var(--color-green);
+    }
+}

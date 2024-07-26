@@ -1,0 +1,82 @@
+.register{
+    width: 100%;
+    margin: 10px 0;
+
+    .register-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        gap: 20px;
+        background: var(--color-white);
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            background-color: transparent;
+
+            div {
+                background: var(--color-white);
+                width: 100%;
+            }
+
+            label {
+                background: var(--color-white);
+            }
+
+            input {
+                width: 100%;
+                padding: 20px;
+                border: none;
+                outline: none;
+                background-color: var(--color-light_grey_input);
+                color: var(--color-black);
+                border-radius: 10px;
+            }
+
+        }
+
+        .btn_back_tologin{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: transparent;
+
+            p{
+            background-color: transparent;
+            }
+
+            button {
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+                cursor: pointer;
+                background-color: var(--color-green_btn);
+
+                &:hover {
+                    background-color: var(--color-green_btn_hover);
+                    color: var(--color-white);
+                }
+            }
+        }
+
+    }
+}
+
+
+.error {
+    color: red;
+    text-align: center;
+}
