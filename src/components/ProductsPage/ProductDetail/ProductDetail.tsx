@@ -60,7 +60,7 @@ const ProductDetail: React.FC = () => {
 
   const toggleToImage = () => setShowImage(true);
   const toggleToDetail = () => setShowImage(false);
-  const handleBack = () => navigate('/');
+  const handleBack = () => navigate(-1);
   const handleProduct = (category: string, productId: string) => navigate(`/productdetail/${category}/${productId}`);
 
   const handleBuyProduct = async (category: string, productId: string, currentStatus?: boolean) => {
