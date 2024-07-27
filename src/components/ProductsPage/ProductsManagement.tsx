@@ -21,7 +21,6 @@ interface ProductWithId extends Product {
   id: string;
 }
 
-
 interface Products {
   [category: string]: {
     [productId: string]: Product;
@@ -46,18 +45,25 @@ const ProductManagement: React.FC = () => {
     });
   }, []);
 
+
   const handleDelete = (category: string, productId: string) => {
     const productRef = ref(database, `products/${category}/${productId}`);
     remove(productRef).then(() => {
       setProducts(prevProducts => {
         const updatedProducts = { ...prevProducts };
         delete updatedProducts[category][productId];
+
+        if (Object.keys(updatedProducts[category]).length === 0) {
+          delete updatedProducts[category];
+        }
+
         return updatedProducts;
       });
     }).catch((error) => {
       console.error('Error deleting product:', error);
     });
   };
+
 
   const handleEdit = (category: string, productId: string) => {
     const product = products[category][productId];

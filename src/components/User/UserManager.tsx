@@ -3,10 +3,8 @@ import { IoMdTrash, IoMdCheckmark, IoMdCloseCircle } from 'react-icons/io';
 import { ref, get, set, remove } from 'firebase/database';
 import { database } from '../../firebaseConfig';
 import './UserManager.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table';
 
-// Định nghĩa kiểu dữ liệu cho User
 interface User {
     uid: string;
     email: string;
